@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual é o seu País?</title>
+    <style>
+
+    h1#h1 {
+        color: hsl(236, 85%, 18%);
+    }
+
+    body{
+        font: normal 25pt arial;background-color: rgb(140, 235, 235);
+    }
+
+    </style>
+
+</head>
+<body>
+    <h1 id="h1"><strong>Digite abaixo qual é o seu País</strong></h1>
+
+    Digita aqui: <input type="text"name ="txtpais" id="txtpais">
+
+    <input type="button" value="verificar" onclick="verificar()">
+    
+    <div id="res">
+
+    </div>
+    
+    <script>
+        function verificar() {
+
+            var txtv = document.getElementById('txtpais')
+
+            var res = document.getElementById('res')
+
+            var a = (txtv.value)
+
+            if (a == 'brasil'){
+                res.innerHTML = `<p>você é <strong>Brasileiro!</strong></p>`
+            }else {
+                res.innerHTML = `<p>você é <strong>Estrangeiro!</strong></p>`
+            }
+    
+        }
+
+    </script>
+</body>
+</html>
